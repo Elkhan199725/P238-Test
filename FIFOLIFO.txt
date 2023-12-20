@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+
+
+Queue<string> myQueue = new Queue<string>();
+
+// Enqueue elements
+myQueue.Enqueue("Alice");
+myQueue.Enqueue("Bob");
+myQueue.Enqueue("Charlie");
+
+// Dequeue and process elements in FIFO order
+while (myQueue.Count > 0)
+{
+    string frontElement = myQueue.Dequeue();
+    Console.WriteLine("Processing: " + frontElement);
+}
+if (myQueue.Count == 0)
+{
+    Console.WriteLine("The queue is empty.");
+}
+myQueue.Clear();
+
+
+// Create a stack
+Stack<string> myStack = new Stack<string>();
+
+// Push elements
+myStack.Push("Alice");
+myStack.Push("Bob");
+myStack.Push("Charlie");
+
+// Pop and process elements in LIFO order
+while (myStack.Count > 0)
+{
+    // Pop operation
+    string topElement = myStack.Pop();
+
+    // Process operation
+    Console.WriteLine("Processing: " + topElement);
+}
+if (myQueue.Count == 0)
+{
+    Console.WriteLine("The queue is empty.");
+}
+myQueue.Clear();
